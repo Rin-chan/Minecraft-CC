@@ -14,13 +14,11 @@ CC: Tweaked - https://www.curseforge.com/minecraft/mc-mods/cc-tweaked
 Documentation for CC: Tweaked - https://tweaked.cc/
 <br>
 <hr>
-<br>
 Advanced Peripherals - https://www.curseforge.com/minecraft/mc-mods/advanced-peripherals
 <br>
 Documentation for Advanced Peripherals - https://peaceful-nobel-03befe.netlify.app/
 <br>
 <hr>
-<br>
 More Peripherals - https://www.curseforge.com/minecraft/mc-mods/more-peripherals
 <br>
 Documentation for More Peripherals - https://jheffersonmarques.github.io/More-Peripherals-Docs/
