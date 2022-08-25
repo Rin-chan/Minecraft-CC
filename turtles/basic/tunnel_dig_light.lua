@@ -36,7 +36,7 @@ function dig_straight()
 end
 
 function dig_down()
-    -- Dig if there is a block on top
+    -- Dig if there is a block on bottom
     if turtle.detectDown() then
         turtle.digDown()
         sleep(0.5)
