@@ -10,7 +10,6 @@ if http.checkURL(url) then
     startup = fs.open("startup", "w")
     startup.write(request)
     startup.close()
-    request.close()
 else
     print("This url cannot be found.")
 end
