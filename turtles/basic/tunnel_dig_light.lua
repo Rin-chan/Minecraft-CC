@@ -1,5 +1,3 @@
--- NOT TESTED IN GAME YET
-
 -- Meant for digging tunnels using one mining turtle. (Runs on both normal and advanced mining turtles)
 -- Turtle will according to the distance stated. A side tunnel is created every 3 blocks inbetween.
 -- This would be more efficient if there was another turtle carrying torches as the turtle is forced to stop if it runs out of torches. The mining turtle would also contain chest so that it can store it's inventory as the turtle's inventory is very small.
@@ -26,27 +24,31 @@ end
 function placeTorches()
     -- Get torches in slot 2
     turtle.select(2)
-    turtle.placeUp()
+    turtle.placeDown()
 end
 
-function dig()
+function dig_straight()
     -- Dig if there is a block in front
     if turtle.detect() then
         turtle.dig()
-    end
-
-    turtle.forward()
-
-    -- Dig if there is a block on top
-    if turtle.detectUp() then
-        turtle.digUp()
+        sleep(0.5)
     end
 end
 
-function tunnel(tunnel)
+function dig_down()
+    -- Dig if there is a block on top
+    if turtle.detectDown() then
+        turtle.digDown()
+        sleep(0.5)
+    end
+end
+
+function tunnel_dig(tunnel)
     -- Dig a side tunnel
-    for tunnel_count=0, tunnel, 1 do
-        dig()
+    for tunnel_count=1, tunnel, 1 do
+        dig_straight()
+        turtle.forward()
+        dig_down()
 
         if tunnel_count%8 == 0 then
             placeTorches()
@@ -58,11 +60,9 @@ function tunnel(tunnel)
     turtle.turnLeft()
 
     -- Move back to starting position
-    for tunnel_count=0, tunnel, 1 do
+    for tunnel_count=1, tunnel, 1 do
         turtle.forward()
     end
-
-    turtle.forward()
 end
 
 function checkInventory()
@@ -84,31 +84,36 @@ distance = io.read()
 print("How far each tunnel will go?")
 tunnel = io.read()
 
-for count=0, distance, 1 do
+moved = 0
+for count=1, distance, 1 do
     -- Main Tunnel
     if count%40 == 0 then
         refuel()
     end
 
-    dig()
+    dig_straight()
+    turtle.forward()
+    dig_down()
 
     if count%8 == 0 then
         placeTorches()
     end
 
     -- Side Tunnels
-    if (count%3 == 0) and (count ~= 0) then
+    if (count%4 == 0) and (count ~= 1) then
 
         -- Dig right side 
         turtle.turnRight()
-        tunnel(tunnel)
+        tunnel_dig(tunnel)
 
         -- Dig Left side
-        tunnel(tunnel)
+        tunnel_dig(tunnel)
 
         -- Go back to center
         turtle.turnLeft()
     end
+
+    moved = count
 
     -- Stop the turtle if fuel gets below a certain point
     if turtle.getItemCount(1) < 16 then
@@ -126,6 +131,6 @@ turtle.turnLeft()
 turtle.turnLeft()
 
 -- Move back to starting location
-for backward=0, count, 1 do
+for backward=1, moved, 1 do
     turtle.forward()
 end
