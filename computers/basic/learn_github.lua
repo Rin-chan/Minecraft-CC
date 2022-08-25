@@ -1,9 +1,8 @@
--- NOT TESTED IN GAME YET
-
--- Get codes from Github into the computer and save it for startup. (To replace Pastebin as it's easier to update on Github)
+-- Get codes from Github into the computer and save it for startup. (To replace Pastebin as it's easier to update on Github & learn http in CC)
 
 -- Main
-url = "https://raw.githubusercontent.com/Rin-chan/Minecraft-CC/master/turtles/basic/learn_dig.lua"
+print("Enter Github Raw URL:")
+url = io.read()
 
 if http.checkURL(url) then
     request = http.get(url).readAll()
