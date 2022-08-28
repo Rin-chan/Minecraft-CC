@@ -6,10 +6,13 @@ url = io.read()
 
 if http.checkURL(url) then
     request = http.get(url).readAll()
-    print(request)
-    startup = fs.open("startup", "w")
-    startup.write(request)
-    startup.close()
+    
+    print("Where do you want to save this file?")
+    location = io.read()
+
+    writeIn = fs.open(location, "w")
+    writeIn.write(request)
+    writeIn.close()
 else
     print("This url cannot be found.")
 end
