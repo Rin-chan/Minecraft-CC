@@ -1,5 +1,5 @@
 -- Meant for learning how to set torches in a straight line using environment turtles. (Runs on both normal and advanced environment turtles)
--- This requires Advanced Peripherals.
+-- This requires Advanced Peripherals, https://www.curseforge.com/minecraft/mc-mods/advanced-peripherals.
 -- Turtle will add torches until it runs out or does not have a place to move. (It will continue to move even without torches)
 -- This does not include refueling. Fuel will have to be added before running these codes.
 
