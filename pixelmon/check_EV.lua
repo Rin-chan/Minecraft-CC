@@ -1,7 +1,7 @@
 -- Check what EV the Pokemon drops
 -- Pastebin: https://pastebin.com/11wYfjE7
 
-local stats = {"HP", "Attack", "Defense", "SpecialAttack", "SpecialDefense", "Speed"}
+local stats = {"HP", "Attack", "Defense", "Special Attack", "Special Defense", "Speed"}
 
 -- Main
 url = "https://raw.githubusercontent.com/Rin-chan/Minecraft-CC/master/pixelmon/webScraping/EV_Scraping/EV_Data.csv"
