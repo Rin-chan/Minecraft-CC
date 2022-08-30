@@ -7,6 +7,8 @@ turtles - Contains codes that mainly focus on turtles
 computers - Contains codes that mainly focus on computers
 <br>
 pockets - Contains codes that mainly focus on pocket computers
+<br>
+pixelmon - Contains codes that mainly focuses on Pokemon. Meant for playing on Pixelmon.
 
 ### Mods:
 CC: Tweaked - https://www.curseforge.com/minecraft/mc-mods/cc-tweaked
