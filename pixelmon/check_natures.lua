@@ -1,4 +1,5 @@
 -- Check what does each nature do
+-- Pastebin: https://pastebin.com/RYXKWXj5 (Updated on 31/8/2022)
 
 local natureList = {"adamant", "bashful", "bold", "brave", "calm", "careful", "docile", "gentle", "hardy", "hasty", "impish", "jolly", "lax", "lonely", "mild", "modest", "naive", "naughty", "quiet", "quirky", "rash", "relaxed", "sassy", "serious", "timid"}
 

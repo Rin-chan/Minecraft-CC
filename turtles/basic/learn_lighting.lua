@@ -2,6 +2,7 @@
 -- This requires Advanced Peripherals, https://www.curseforge.com/minecraft/mc-mods/advanced-peripherals.
 -- Turtle will add torches until it runs out or does not have a place to move. (It will continue to move even without torches)
 -- This does not include refueling. Fuel will have to be added before running these codes.
+-- NOT RECOMMENDED FOR USAGE
 
 function torches()
     -- Turtle will add a torch above it (to prevent hostile mob spawns)

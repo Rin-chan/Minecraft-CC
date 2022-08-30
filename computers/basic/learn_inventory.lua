@@ -1,4 +1,5 @@
 -- Display items in chest in the computer and monitor. (Tested on 4x4 monitors)
+-- It is usable but pretty useless
 
 -- Main
 chest = peripheral.find("minecraft:chest")

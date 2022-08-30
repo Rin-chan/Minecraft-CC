@@ -2,7 +2,8 @@
 -- Turtle will mine a 16x16 Minecraft chunk, starting from the bottom left corner of the chunk.
 -- Recommend to feed blocks of coal/charcoal so that the turtle will not run out of fuel while digging through one chunk
 -- Place a chest on top of the starting position of the turtle to collect items
--- Turtle should equip shovel and pickaxe to prevent inability to dig through dirts
+-- Turtle should equip shovel and pickaxe to prevent inability to dig through dirts (Mineshaft would be an issue)
+-- Pastebin: https://pastebin.com/4XGMKG4B (Updated on 31/8/2022)
 
 refuelLevel = 300
 chunk = 16

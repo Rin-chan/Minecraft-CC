@@ -2,6 +2,7 @@
 -- Turtle will according to the distance stated. A side tunnel is created every 3 blocks inbetween.
 -- This would be more efficient if there was another turtle carrying torches as the turtle is forced to stop if it runs out of torches. The mining turtle would also contain chest so that it can store it's inventory as the turtle's inventory is very small.
 -- Multi-turtle version in intermediate.
+-- NOT TESTED ENOUGH FOR USAGE
 
 refuelLevel = 160
 
