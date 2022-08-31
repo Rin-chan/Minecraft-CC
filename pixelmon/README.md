@@ -5,4 +5,5 @@ All the codes are meant for and will work on tablets.
 
 ### API & other stuff used:
 PokeAPI: https://pokeapi.co/
+<br>
 Web Scraping for data
