@@ -1,5 +1,7 @@
 # Codes for CC: Tweaked
 Made for self entertainment and fun to be used in Minecraft. Some codes might require addons and will be stated if addons are required.
+<br>
+Pastebin for usable programs: https://pastebin.com/u/RinRoxy
 
 ### Folder guide:
 turtles - Contains codes that mainly focus on turtles
