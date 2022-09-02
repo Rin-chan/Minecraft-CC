@@ -59,6 +59,7 @@ monitor.clear()
 local button1 = button(monitor, 2, 2, 8, 4, colors.blue, "Hello", "center", "center")
 
 while true do
+---@diagnostic disable-next-line: undefined-field
     local event, m_button, x, y = os.pullEvent("monitor_touch")
 
     print(("The mouse button %s was pressed at %d, %d"):format(m_button, x, y))
