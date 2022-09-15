@@ -1,5 +1,5 @@
--- Display time in computer (Will add monitor in the future)
--- Pastebin: https://pastebin.com/jbmzwMFP (Updated on 14/9/2022)
+-- Display time in computer
+-- Pastebin: https://pastebin.com/jbmzwMFP (Updated on 15/9/2022)
 
 local timezoneList = {}
 
@@ -29,16 +29,18 @@ function conversion12Hour(time)
     return result
 end
 
+-- Main
 print("What is your timezone? (eg. Asia/Singapore)")
 local timezone = io.read()
 
-local monitor = peripheral.find("monitor")
+local monitor = peripheral.wrap("right")
+local width, height = monitor.getSize()
 
 while true do
     local timeJSON = getTime(timezone)
 
     monitor.clear()
-    monitor.setCursorPos(2, 2)
+    monitor.setCursorPos(width/2, height/2)
     
     if timeJSON ~= nil then
         monitor.write(conversion12Hour(timeJSON.time))
