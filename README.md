@@ -19,9 +19,3 @@ Documentation for CC: Tweaked - https://tweaked.cc/
 
 ### Personal reference:
 Lua - https://www.tutorialspoint.com/lua/index.htm
-
-### To do list (Not in order):
-- Create alarm clocks in game (synced to real time life)
-- Pocket Notepad (Possibly multiple notes in one app)
-- Sudoku (Using a different algorithm compared to Discord_Bot)
-- Minesweeper
