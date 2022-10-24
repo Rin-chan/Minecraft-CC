@@ -1,5 +1,5 @@
 -- Alarm clock
--- Pastebin: https://pastebin.com/QUYTwstC (Updated on 23/10/2022)
+-- Pastebin: https://pastebin.com/QUYTwstC (Updated on 24/10/2022)
 
 local timezoneList = {}
 
@@ -35,6 +35,7 @@ end
 print("What is your timezone? (eg. Asia/Singapore)")
 local timezone = io.read()
 local monitor = peripheral.wrap("right")
+local speakers = peripheral.wrap("left")
 
 while true do
     local timeJSON = getTime(timezone)
@@ -53,6 +54,7 @@ while true do
 
             if (v == timeJSON.time) then
                 monitor.write(k.." at "..v.. " is ringing")
+                speakers.playSound("entity.sheep.hurt")
             else
                 monitor.write(k.." at "..v)
             end
