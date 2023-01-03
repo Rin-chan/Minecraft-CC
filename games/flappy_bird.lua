@@ -1,5 +1,5 @@
 -- Recreation of Flappy Bird game
--- Pastebin: https://pastebin.com/eWGqQxW4 (INCOMPLETE, 3/1/2023)
+-- Pastebin: https://pastebin.com/eWGqQxW4 (Updated on 3/1/2023)
 
 -- Bird class
 Bird = {x=0, y=0}
@@ -53,6 +53,7 @@ function moveBoard(board, maxWidth, maxHeight)
     local lastK = 1
     local lastX = 0
 
+    -- Move current obstacles
     for k, v in pairs(board.obs) do
         if (k == nil or v[1] == nil or v[2] == nil or v[3] == nil) then
             break
@@ -63,6 +64,7 @@ function moveBoard(board, maxWidth, maxHeight)
         lastK = k+1
     end
 
+    -- Add new obstacles
     if maxWidth-lastX > 12 then
         topHeight = math.random(2, maxHeight-5)
         bottomHeight = math.random(topHeight+5, maxHeight)
@@ -96,6 +98,7 @@ local function tick()
                 term.setCursorPos(v[1], i)
                 term.write("P")
 
+                -- Check for collision
                 if (bird.x+1 == v[1] and bird.y == i) then
                     gameEnd = true
                 end
@@ -112,6 +115,7 @@ local function tick()
                 term.setCursorPos(v[1], i)
                 term.write("P")
 
+                -- Check for collision
                 if (bird.x+1 == v[1] and bird.y == i) then
                     gameEnd = true
                 end
@@ -154,6 +158,7 @@ width, height = term.getSize()
 bird = Bird:new({}, math.floor((width/2)-3+0.5), math.floor((height/2)+0.5))
 board = Board:new({}, {})
 
+-- Randomize map
 math.randomseed(os.time())
 math.random()
 math.random()
